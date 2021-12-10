@@ -39,7 +39,8 @@ const reducer = (state = initialState, action)=>{
             isLoading: false,
             error:''
         });
-        
+        default: 
+            return(state);
     }
 }
 
