@@ -6,11 +6,10 @@ export const initialState = {
     isLoading: false,
     error: ''
     
-
 }
 
-const reducer = (state = initialState, action)=>{
-    switch(action.type) {
+const reducer = (state = initialState, action)=> {
+    switch (action.type) {
         case(FETCH_START):
         return({
             ...state,
@@ -21,7 +20,7 @@ const reducer = (state = initialState, action)=>{
         case(FETCH_SUCCESS):
         return({
             ...state,
-            smurfs:action.playload,
+            smurfs: action.playload,
             isLoading: false,
             error:''
         });
@@ -35,7 +34,7 @@ const reducer = (state = initialState, action)=>{
         case(ADD_SMURF):
         return({
             ...state,
-            smurfs:[...state.smurfs,action.playload],
+            smurfs: [...state.smurfs, action.payload],
             isLoading: false,
             error:''
         });

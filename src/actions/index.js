@@ -7,16 +7,16 @@ export const ADD_SMURF = "ADD_SMURF";
 
 
 export const fetchSmurfs = () => {
-    return(dispatch) => {
+    return (dispatch) => {
         dispatch(fetchStart());
 
         axios.get('http://localhost:3333/smurfs')
-            .then(resp => {
-                dispatch(fetchSuccess(resp.data))
-            })
-            .catch(err => {
-                dispatch(fetchError(err));
-            });
+          .then(resp=> {
+            dispatch(fetchSuccess(resp.data));
+        })
+        .catch(err => {
+            dispatch(fetchError(err));
+        });
     }
 }
 
